@@ -11,6 +11,6 @@ plot2 <- function()
   names(reqdata)[2] <- "time"
   png(file="plot2.png",height=480,width=480)
   datetime <- as.POSIXct(paste(reqdata$date, reqdata$time), format="%Y-%m-%d %H:%M:%S")
-  plot(y=as.numeric(as.character(reqdata[,3])),x=datetime,type="l")
+  plot(y=as.numeric(as.character(reqdata[,3])),x=datetime,type="l",ylab="Global Active Power (kilowatts)",xlab="")
   dev.off()
 }
